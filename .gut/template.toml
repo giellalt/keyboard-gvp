@@ -1,0 +1,40 @@
+# This template merge config file lists:
+#
+# - name: name of template stuff
+# - patterns: strings to do text substitution on
+# - rev_id: a sequential revision id of the template repo (manually maintained for now)
+# - required: a full list of all files always merged
+# - optional: a full list of all files merged when the --optional flag is used with `gut template`
+# - ignored: never used in merging, only when populating new repos
+
+name = "Keyboard Template"
+patterns = ["gvp", "gvp", "Pará Gavião", "GPLv3"]
+rev_id = 23
+required = [".gitignore",
+            ".github/workflows/docsygen.yml",
+            ".taskcluster.yml",
+            "Makefile.am",
+            "autogen.sh",
+            "configure.ac",
+            "docs/_config.yml",
+            "docs/_includes/toc.html",
+            "docs/_layouts/default.html",
+            "docs/assets/css/style.scss"]
+
+optional = [".github/workflows/build.yml",
+            "AUTHORS",
+            "README.md",
+            "gvp.kbdgen/layouts/gvp.yaml",
+            "gvp.kbdgen/layouts/en.yaml",
+            "gvp.kbdgen/project.yaml",
+            "gvp.kbdgen/resources/mac/background.png",
+            "gvp.kbdgen/resources/mac/icon.gvp.png",
+            "gvp.kbdgen/resources/mac/readme.html",
+            "gvp.kbdgen/targets/android.yaml",
+            "gvp.kbdgen/targets/ios.yaml",
+            "gvp.kbdgen/targets/mac.yaml",
+            "gvp.kbdgen/targets/win.yaml",
+            "docs/index.md",
+            "docs/layout.md"]
+
+ignored  = ["LICENSE"]
